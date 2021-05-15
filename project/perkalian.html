@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous" />
+
+    <title>Project Perkalian</title>
+    <style>
+      #show {
+        display: none;
+      }
+      .container{
+         font-family: 'Pangolin', cursive;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning fixed-top">
+      <div class="container">
+        <a class="navbar-brand text-white" style="font-family: poppins" href="#">WebsiteBuilder</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto fw-normal">
+            <a class="nav-link active text-white" aria-current="page" href="Project DPW.html">Home</a>
+            <a class="nav-link text-white" href="index.html">About</a>
+            <a class="nav-link text-white" href="index.html">Contact Us</a>
+            <a class="nav-link text-white" href="index.html">Project</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        fill="#ffc107"
+        fill-opacity="1"
+        d="M0,192L30,208C60,224,120,256,180,245.3C240,235,300,181,360,144C420,107,480,85,540,106.7C600,128,660,192,720,208C780,224,840,192,900,165.3C960,139,1020,117,1080,106.7C1140,96,1200,96,1260,128C1320,160,1380,224,1410,256L1440,288L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"
+      ></path>
+    </svg>
+    <!-- Akhir Navbar -->
+
+    <div class="container">
+      <h3 class="text-center">Perkalian</h3>
+      <div class="mb-3">
+        <label for="form1" class="form-label">Masukkan Angka Pertama</label>
+        <input type="text" class="form-control" id="form1" placeholder="masukkan angka" />
+      </div>
+      <div class="mb-3">
+        <label for="form2" class="form-label">Masukkan Angka Kedua</label>
+        <input type="text" class="form-control" id="form2" placeholder="masukkan angka" />
+      </div>
+      <div class="mb-3 text-center">
+        <button type="button" class="btn btn-warning text-center" onclick="kali()">submit</button>
+      </div>
+      <div class="mb-3 text-center">
+        <h3 id="show"></h3>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <script>
+      const kali = () => {
+        let form1 = document.querySelector('#form1').value;
+        let form2 = document.querySelector('#form2').value;
+        let show = document.querySelector('#show');
+        let result = parseInt(form1) * parseInt(form2)
+        show.innerHTML = `${form1} x ${form2} = ${result}`;
+        show.style.display = 'block';
+      };
+    </script>
+  </body>
+</html>
